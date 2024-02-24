@@ -2,11 +2,26 @@
 
 
 :root {
-    --blue: #345FF6;
+background-color: rgba();
+--blue: #345FF6;
     --gunmetal: #253347;
     --darkblue: #5E6E85;
     --borders: #D8E2E7;
     --pureWhite: #D8E2E7;
     --fontInter: "Inter", sans-serif;
+
+}
+
+.container-grid {
+height: 300px;
+width: 600px;
+border: 2px solid black;
+}
+
+.banner-flex {
+background-image: linear-gradient();
+background-color: rgba(214, 252, 254, 0);
+
+
 
 }
