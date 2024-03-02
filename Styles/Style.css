@@ -2,8 +2,8 @@
 
 
 :root {
-background-color: rgba();
---blue: #345FF6;
+    background-color: rgba();
+    --blue: #345FF6;
     --gunmetal: #253347;
     --darkblue: #5E6E85;
     --borders: #D8E2E7;
@@ -12,16 +12,475 @@ background-color: rgba();
 
 }
 
+
+/* Estilizar o reset do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
 .container-grid {
-height: 300px;
-width: 600px;
-border: 2px solid black;
+    max-width: 1920px;
+    width: 70%;
+    margin: 0 auto;
+    height: auto;
+
 }
 
 .banner-flex {
-background-image: linear-gradient();
-background-color: rgba(214, 252, 254, 0);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilizar a div body mass */
+.body-mass {
+    position: relative;
+    background-image: linear-gradient(to left top, rgba(214, 230, 254, 100%), rgba(214, 252, 254, 0%));
+    width: 700px;
+    height: auto;
+    border-radius: 20px;
+    padding: 10px;
 
 
+}
+
+.body-mass>h1 {
+    font-family: var(--fontInter);
+    font-weight: bold;
+    font-size: 48px;
+    margin-left: 20px;
+
+}
+
+.body-mass p {
+    font-family: var(--fontInter);
+    font-size: 20px;
+    margin-top: 30px;
+    margin-left: 20px;
+    width: 400px;
+
+}
+
+.body-mass>img {
+    margin-bottom: 60px;
+    margin-left: 20px;
+}
+
+
+
+/* Estilizar a div checkbox card */
+.checkbox-card {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 20px;
+}
+
+
+
+.checkbox-card>label {
+    font-family: var(--fontInter);
+    font-size: 16px;
+    font-weight: bold;
+
+}
+
+
+/* Estilizar os inputs */
+/* Esta estilização é para tirar as duas fechinhas que herdão do input number */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.inputs-card {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+
+}
+
+/* Estilizar o input height */
+.inputs-height {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.inputs-height label {
+    margin-bottom: 6px;
+    font-family: var(--fontInter);
+    color: #5E6E85;
+}
+
+.inputs-height input {
+    margin-bottom: 20px;
+    border-radius: 12px;
+    width: 130px;
+    height: 40px;
+    padding: 10px;
+    border: 1px solid var(--pureWhite);
+}
+
+.inputs-height ::placeholder {
+    text-align: right;
+    color: var(--blue);
+}
+
+/* Estilizar o input weight */
+
+.inputs-weight {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputs-weight label {
+    margin-bottom: 6px;
+    font-family: var(--fontInter);
+    color: #5E6E85;
+}
+
+.inputs-weight ::placeholder {
+    text-align: right;
+    color: var(--blue);
+}
+
+.inputs-weight input {
+    margin-bottom: 20px;
+    border-radius: 12px;
+    width: 130px;
+    height: 40px;
+    padding: 10px;
+    border: 1px solid var(--pureWhite);
+}
+
+
+
+/* Estilizar a div card-resultado */
+.card-resultado {
+    position: absolute;
+    left: 680px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    padding: 20px;
+    background-color: #FFFFFF;
+    box-shadow: 8px 9px 12px #D8E2E7;
+
+}
+
+.titulo-card>h2 {
+    font-family: var(--fontInter);
+    font-size: 20px;
+    margin-bottom: 30px;
+
+}
+
+/* Estilizar a div resultados */
+
+.resultado {
+
+    background-image: linear-gradient(to right bottom, rgba(52, 95, 248, 100%), rgba(88, 125, 255, 100%));
+    margin-top: 20px;
+    border-radius: 6px 50px 50px 6px;
+    width: 290px;
+    height: 120px;
+    padding: 10px;
+
+}
+
+
+.titulo-resultado>h1 {
+    font-family: var(--fontInter);
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+
+.calculo-flex {
+    display: flex;
+
+}
+
+.calculo-flex h1 {
+    font-family: var(--fontInter);
+    font-weight: bold;
+    font-size: 24px;
+    color: #FFFFFF;
+
+}
+
+.calculo-flex>p {
+    color: #FFFFFF;
+    font-family: var(--fontInter);
+    font-weight: bold;
+    font-size: 12px;
+    margin-left: 30px;
+
+}
+
+/* Estilizar a section .container-display-grid */
+
+.container-display-grid {
+    max-width: 1920px;
+    width: 70%;
+    position: relative;
+    left: 30px;
+    margin: 0 auto;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 150px;
+    gap: 60px;
+}
+
+.coluna01-imagem {
+
+    background-image: linear-gradient(to left top, rgba(214, 230, 254, 100%), rgba(214, 252, 254, 0%));
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 250px;
+    border-radius: 20px;
+}
+
+.coluna01-imagem>img {
+    position: absolute;
+    width: 300px;
+    height: 350px;
+    left: 65px;
+    bottom: 1px;
+}
+
+.artigo-resultado {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+}
+
+.artigo-resultado>h1 {
+    font-family: var(--fontInter);
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.artigo-resultado>p {
+    font-family: var(--fontInter);
+    font-size: 12px;
+
+}
+
+/* Estilizar a section .container-grid-section3 */
+.container-grid-section3 {
+    max-width: 1920px;
+    width: 90%;
+    margin: 0 auto;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 150px;
+    gap: 60px;
+    background-image: linear-gradient(to right top, rgba(214, 230, 254, 0%), rgba(214, 230, 254, 30%));
+    border-radius: 20px;
+}
+
+/* Estilizar o .healthy */
+.healthy {
+    padding: 30px;
+
+}
+
+.healthy>img {
+    margin-bottom: 25px;
+}
+
+.healthy>h1 {
+    font-family: var(--fontInter);
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.healthy>p {
+    font-family: var(--fontInter);
+    font-size: 16px;
+
+}
+
+
+/* Estilizar o regular */
+.regular {
+    padding: 30px;
+
+}
+
+.regular>img {
+    margin-bottom: 25px;
+}
+
+.regular>h1 {
+    font-family: var(--fontInter);
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.regular>p {
+    font-family: var(--fontInter);
+    font-size: 16px;
+
+}
+
+
+
+/* Estilizar o adequate */
+.adequate {
+    padding: 30px;
+
+}
+
+.adequate>img {
+    margin-bottom: 25px;
+}
+
+.adequate>h1 {
+    font-family: var(--fontInter);
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.adequate>p {
+    font-family: var(--fontInter);
+    font-size: 16px;
+}
+
+/* Estilizar section limitation */
+
+.limitation>h1 {
+    font-family: var(--fontInter);
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.limitation>p {
+    font-family: var(--fontInter);
+    font-size: 16px;
+    color: #5E6E85;
+}
+
+
+/* Estilizar card01 */
+
+
+.limitation {
+    position: relative;
+    width: 450px;
+}
+
+.limitation>h1 {
+    font-family: var(--fontInter);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.limitation>p {
+    font-family: var(--fontInter);
+    font-size: 16px;
+    color: #5E6E85;
+}
+
+
+.cards-position {
+    height: 600px;
+}
+
+/* Estilizar os cards */
+.card-01 {
+    position: absolute;
+    left: 500px;
+    width: 300px;
+    top: 35px;
+    box-shadow: 12px 12px 12px #D8E2E7;
+    border-radius: 20px;
+    padding: 20px;
+
+}
+
+.card-02 {
+    position: absolute;
+    top: 230px;
+    right: 330px;
+    width: 300px;
+    box-shadow: 12px 12px 12px #D8E2E7;
+    border-radius: 20px;
+    padding: 15px;
+}
+
+.card-03 {
+    position: absolute;
+    top: 230px;
+    left: 580px;
+    width: 300px;
+    box-shadow: 12px 12px 12px #D8E2E7;
+    border-radius: 20px;
+    padding: 15px;
+}
+
+.card-03 {
+    position: absolute;
+    top: 230px;
+    left: 580px;
+    width: 300px;
+    box-shadow: 12px 12px 12px #D8E2E7;
+    border-radius: 20px;
+    padding: 15px;
+}
+
+.card-04 {
+    position: absolute;
+    top: 400px;
+    right: 480px;
+    width: 300px;
+    box-shadow: 12px 12px 12px #D8E2E7;
+    border-radius: 20px;
+    padding: 15px;
+}
+.card-05 {
+    position: absolute;
+    top: 400px;
+    left: 430px;
+    width: 300px;
+    box-shadow: 12px 12px 12px #D8E2E7;
+    border-radius: 20px;
+    padding: 15px;
+}
+
+
+.imagem-titulo {
+    display: flex;
+    gap: 20px;
+}
+
+.imagem-titulo>h1 {
+    font-family: var(--fontInter);
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.paragrafo-card>p {
+    font-family: var(--fontInter);
+    font-size: 14px;
+    color: #5E6E85;
 
 }

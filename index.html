@@ -1,34 +1,234 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="Author" content="Raphael Perdigao" />
-    <meta
-      name="Description"
-      content="Estou criando uma landing page para calcular o IMC dos usuários"
-    />
-    <meta
-      name="keywords"
-      content="Classificação IMC, Peso, Altura e Índice de Massa Corporal"
-    />
-    <link
-      rel="shortcut icon"
-      href="./Assets/Images/favicon-32x32.png"
-      type="image/x-icon"
-    />
-    <title>Web Responsiva</title>
-    <link rel="stylesheet" href="./Styles/Style.css" />
-  </head>
-  <body>
-    <main>
-      <section class="container-grid banner-flex">
 
-      </section>
-    </main>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="Author" content="Raphael Perdigao" />
+  <meta name="Description" content="Estou criando uma landing page para calcular o IMC dos usuários" />
+  <meta name="keywords" content="Classificação IMC, Peso, Altura e Índice de Massa Corporal" />
+  <link rel="shortcut icon" href="./Assets/Images/favicon-32x32.png" type="image/x-icon" />
+  <title>Web Responsiva</title>
+  <link rel="stylesheet" href="./Styles/Style.css" />
+</head>
 
-    <footer></footer>
+<body>
+  <main>
+    <section class="container-grid banner-flex">
+      <div class="body-mass">
+        <img src="Assets/Images/Vector.png" alt="logo_body">
+        <h1>
+          Body Mass<br>
+          Index Calculator
+        </h1>
+        <p>
+          Better understand your weight in relation to your height using our body mass index (BM) calculator. While BMI
+          is not the sole determinant of a healthy weight, it offers a valuable starting point to evaluate your overall
+          health and well-being.
+        </p>
+      </div>
+      <!-- Divisão dos inputs -->
+      <div class="card-resultado">
+        <div class="titulo-card">
+          <h2>
+            Enter your details below
+          </h2>
+        </div>
+        <div class="checkbox-card">
 
-    <script src="./Scripts/script.js"></script>
-  </body>
+          <!-- Checkbox -->
+          <input type="checkbox" id="metric" name="metric">
+          <label for="metric">Metric</label>
+          <input type="checkbox" id="imperial" name="imperial">
+          <label for="imperial">Imperial</label>
+        </div>
+
+        <div class="inputs-card">
+          <div class="inputs-height">
+            <!-- Valor altura e peso -->
+            <label for="height">Height</label>
+
+            <!-- Evento onkeydown="checkEnter(event) criado no java script para quando o usuário pressionar a tecla enter -->
+            <input type="number" id="height" name="height" placeholder="cm" step="0.01" onkeydown="checkEnter(event)">
+          </div>
+          <div class="inputs-weight">
+            <label for="weight">Weight</label>
+
+            <!-- Evento onkeydown="checkEnter(event) criado no java script para quando o usuário pressionar a tecla enter -->
+            <input type="number" id="weight" name="weight" placeholder="Kg" step="0.01" onkeydown="checkEnter(event)">
+          </div>
+
+        </div>
+
+        <!-- Divisão do resultado -->
+        <div class="resultado">
+          <div class="titulo-resultado">
+            <h1>Your BMI is...</h1>
+          </div>
+
+          <div id="claculo" class="calculo-flex">
+            <h1 id="resultIMC">
+              Welcome
+            </h1>
+
+            <p id="resultClassification">
+              Enter your height and weight and you’ll see your BMI result here
+            </p>
+
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <section class="container-display-grid">
+      <div class="coluna01-imagem">
+        <img src="Assets/Images/imagem01.png" alt="imagem-card">
+      </div>
+      <div class="artigo-resultado">
+        <h1>
+          What your BMI result means
+        </h1>
+        <p>
+          A BMI range of 18.5 to 24.9 is considered a 'healthy weight.' Maintaining a healthy weight may lower your
+          chances of experiencing health issues later on, such as obesity and type 2 diabetes. Aim for a nutritious diet
+          with reduced fat and sugar content, incorporating ample fruits and vegetables. Additionally, strive for
+          regular physical activity, ideally about 30 minutes daily for five days a week.
+        </p>
+      </div>
+
+    </section>
+
+
+
+    <section class="container-grid-section3">
+
+      <div class="healthy">
+        <img src="Assets/Images/healthy.svg" alt="healthy">
+        <h1>
+          Healthy eating
+        </h1>
+        <p>
+          Healthy eating promotes weight control, disease prevention, better digestion, immunity, mental clarity, and
+          mood.
+        </p>
+      </div>
+
+      <div class="regular">
+        <img src="Assets/Images/regular.svg" alt="regular">
+        <h1>
+          Regular exercise
+        </h1>
+        <p>
+          Exercise improves fitness, aids weight control, elevates mood, and reduces disease risk, fostering wellness
+          and longevity.
+        </p>
+      </div>
+
+      <div class="adequate">
+        <img src="Assets/Images/adequate.svg" alt="adequate">
+        <h1>
+          Adequate sleep
+        </h1>
+        <p>
+          Sleep enhances mental clarity, emotional stability, and physical wellness, promoting overall restoration and
+          rejuvenation.
+        </p>
+
+      </div>
+    </section>
+
+
+
+
+    <!-- Section Limitation -->
+
+    <section class="container-display-grid">
+
+      <div class="limitation">
+        <h1>
+          Limitations of BMI
+        </h1>
+        <p>
+          Although BMI is often a practical indicator of healthy weight, it is not suited for every person. Specific
+          groups should carefully consider their BMI outcomes, and in certain cases, the measurement may not be
+          beneficial to use.
+        </p>
+      </div>
+
+      <div class="cards-position">
+        <div class="card-01">
+          <div class="imagem-titulo">
+            <img src="Assets/Images/gender.svg" alt="gender">
+            <h1>
+              Gender
+            </h1>
+          </div>
+          <div class="paragrafo-card">
+            <p>The development and body fat composition of girls and boys vary with age. Consequently, a child's age and
+              gender are considered when evaluating their BMI.</p>
+          </div>
+        </div>
+
+        <div class="card-02">
+          <div class="imagem-titulo">
+            <img src="Assets/Images/age.svg" alt="age">
+            <h1>
+              Age
+            </h1>
+          </div>
+          <div class="paragrafo-card">
+            <p>In aging individuals, increased body fat and muscle loss may cause BMI to underestimate body fat content.
+            </p>
+          </div>
+        </div>
+
+
+        <div class="card-03">
+          <div class="imagem-titulo">
+            <img src="Assets/Images/muscle.svg" alt="muscle">
+            <h1>
+              Muscle
+            </h1>
+          </div>
+          <div class="paragrafo-card">
+            <p>BMI may misclassify muscular individuals as overweight or obese, as it doesn't differentiate muscle from
+              fat.</p>
+          </div>
+        </div>
+
+        <div class="card-04">
+          <div class="imagem-titulo">
+            <img src="Assets/Images/pregnancy.svg" alt="pregnancy">
+            <h1>
+              Pregnancy
+            </h1>
+          </div>
+          <div class="paragrafo-card">
+            <p>Expectant mothers experience weight gain due to their growing baby. Maintaining a healthy pre-pregnancy
+              BMI is advisable to minimise health risks for both mother and child.</p>
+          </div>
+        </div>
+
+        <div class="card-05">
+          <div class="imagem-titulo">
+            <img src="Assets/Images/race.svg" alt="race">
+            <h1>
+              Race
+            </h1>
+          </div>
+          <div class="paragrafo-card">
+            <p>Certain health concerns may affect individuals of some Black and Asian origins at lower BMIs than others.
+              To learn more, it is advised to discuss this with your GP or practice nurse.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+ <script src="./Scripts/script.js"></script>
+</body>
+
 </html>
