@@ -95,6 +95,7 @@ input[type="number"]::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
+
 .inputs-card {
     display: flex;
     gap: 20px;
@@ -165,7 +166,6 @@ input[type="number"]::-webkit-inner-spin-button {
     border-radius: 20px;
     display: flex;
     flex-direction: column;
-    width: 400px;
     padding: 20px;
     background-color: #FFFFFF;
     box-shadow: 8px 9px 12px #D8E2E7;
@@ -455,6 +455,7 @@ input[type="number"]::-webkit-inner-spin-button {
     border-radius: 20px;
     padding: 15px;
 }
+
 .card-05 {
     position: absolute;
     top: 400px;
